@@ -1,6 +1,6 @@
-import {Request, Response} from "express"
+import { Request, Response } from "express"
+import { connection } from "../connection"
 
-export const addTeacherClass = async (req:Request, res: Response): Promise<void> =>{
-
-    
+export const addTeacherIntoClass = async (req: Request, res: Response): Promise<void> => {
+   
 }
