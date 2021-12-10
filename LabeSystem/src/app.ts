@@ -4,7 +4,7 @@ import cors from "cors";
 //import dotenv from "dotenv";
 import { AddressInfo } from "net";
 
-/* dotenv.config();
+/*  dotenv.config();
 
 export const connection = knex({
 	client: "mysql",
@@ -15,12 +15,13 @@ export const connection = knex({
     password: process.env.DB_PASS,
     database: process.env.DB_NAME
   }
-}); */
+});  */
 
 export const app: Express = express();
 app.use(express.json());
 app.use(cors());
 
+console.log("Servidor funcionando")
 const server = app.listen(process.env.PORT || 3003, () => {
     if (server) {
        const address = server.address() as AddressInfo;
