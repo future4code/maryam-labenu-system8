@@ -1,5 +1,6 @@
 import {Request, Response} from "express"
-import conection from "../conection"
+
+import { connection } from "../connection"
 
 export const createTeacher = async (req:Request, res: Response): Promise<void> =>{
     try{
@@ -11,6 +12,10 @@ export const createTeacher = async (req:Request, res: Response): Promise<void> =
         //consultar banco de dados
         const id: string = Date.now().toString()
         await conection("labeSystem_docente").insert(id, req.body.email, req.body.data_nasc)
+
+
+
+
 
         //responder a requisição
         res.status(200)

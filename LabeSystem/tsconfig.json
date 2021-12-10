@@ -1,7 +1,18 @@
 {
   "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig.json to read more about this file */
-
+     "target": "es6",
+     "module": "commonjs",
+     "sourceMap": true,
+     "outDir": "./build",
+     "rootDir": "./src",
+     "removeComments": true,
+     "strict": false,
+     "noImplicitAny": true,
+     "esModuleInterop": true,
+     "skipLibCheck": true,
+     "forceConsistentCasingInFileNames": true,
+     "resolveJsonModule": true
+    
     /* Projects */
     // "incremental": true,                              /* Enable incremental compilation */
     // "composite": true,                                /* Enable constraints that allow a TypeScript project to be used with project references. */
@@ -87,5 +98,6 @@
     // "useUnknownInCatchVariables": true,               /* Type catch clause variables as 'unknown' instead of 'any'. */
     // "alwaysStrict": true,                             /* Ensure 'use strict' is always emitted. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+
   }
 }
