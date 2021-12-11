@@ -10,7 +10,7 @@ import  getTeacher from "./endpoints/getTeacher";
 
 app.post("/estudante",createStudent)
 app.get("/estudante/:id", getStudentAgeById)
-app.get("/Professor", getTeacher)
+app.get("/professor/:id", getTeacher)
 app.patch("/estudante/:id",addStudentIntoClass)
 app.patch("/professor/:id", addTeacherIntoClass)
 app.post("/professor",createTeacher)

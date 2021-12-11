@@ -4,6 +4,8 @@ import { connection } from "../connection"
 
 export const createTeacher = async (req:Request, res: Response): Promise<void> =>{
     try{
+        const {nome, email,data_nasc} = req.body
+
         //validação de dados
         if(!req.body.nome || !req.body.email || !req.body.data_nasc){
             res.status(400).send("Preencha todos os campos")
@@ -11,10 +13,13 @@ export const createTeacher = async (req:Request, res: Response): Promise<void> =
         
         //consultar banco de dados
         const id: string = Date.now().toString()
-        await conection("labeSystem_docente").insert(id, req.body.email, req.body.data_nasc)
-
-
-
+        // await connection("labeSystem_docente").insert(id, req.body.email, req.body.data_nasc)
+        await connection ('labeSystem_docente').insert({
+            id,
+            nome:nome,
+            email,
+            data_nasc:data_nasc
+        })
 
 
         //responder a requisição
